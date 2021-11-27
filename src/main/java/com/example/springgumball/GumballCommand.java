@@ -9,6 +9,9 @@ class GumballCommand {
 
     private String action ;
     private String message ;
+    private String state ;
+    private String timestamp ;
+    private String hash ;
     
 }
 

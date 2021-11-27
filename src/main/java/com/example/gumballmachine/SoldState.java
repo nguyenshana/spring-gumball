@@ -23,7 +23,7 @@ public class SoldState implements State {
  
 	public void dispense() {
 		gumballMachine.releaseBall();
-		if (gumballMachine.getCount() > 0) {
+		if (true) {
 			gumballMachine.setState(gumballMachine.getNoQuarterState());
 		} else {
 			System.out.println("Oops, out of gumballs!");

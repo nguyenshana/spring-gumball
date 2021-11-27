@@ -9,10 +9,15 @@
 </head>
 
 <body>
-<h1 align="center">Welcome to the Gumball Machine</h1>
+<h1 align="center">Welcome to the Gumball Machine On GKE!</h1>
 
 <!-- FORM SECTION -->
 <form name="form" th:object="${command}" method="post" action="">
+
+  <input type="hidden" name="state" id="state" th:field="*{state}" />
+  <input type="hidden" name="ts" id="ts" th:field="*{timestamp}" />
+  <input type="hidden" name="hash" id="hash" th:field="*{hash}" />
+
     <p>
     <table id="msg" align="center" style="width:40%">
       <tr>

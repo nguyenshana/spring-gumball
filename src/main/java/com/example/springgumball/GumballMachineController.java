@@ -32,10 +32,12 @@ public class GumballMachineController {
         g.setSerialNumber( "2134998871109") ;
         model.addAttribute( "gumball", g ) ;
         
-        GumballMachine gm = new GumballMachine(10) ;
+        GumballMachine gm = new GumballMachine() ;
         String message = gm.toString() ;
         session.setAttribute( "gumball", gm) ;
         String session_id = session.getId() ;
+
+        command.setState( gm.getState().getClass().getName() ) ;
 
         String server_ip = "" ;
         String host_name = "" ;

@@ -15,7 +15,7 @@ jar:
 
 run: jar
 	echo Starting Spring at:  http://localhost:8080
-	java -jar build/libs/spring-gumball-1.0.jar
+	java -jar build/libs/spring-gumball-2.0.jar
 
 # Docker
 
@@ -37,8 +37,8 @@ docker-shell:
 
 docker-push:
 	docker login
-	docker build -t $(account)/spring-gumball:v1 -t $(account)/spring-gumball:v1 .
-	docker push $(account)/spring-gumball:v1 
+	docker build -t $(account)/spring-gumball:v2 -t $(account)/spring-gumball:v2 .
+	docker push $(account)/spring-gumball:v2 
 
 # Compose
 
@@ -46,7 +46,7 @@ network-ls:
 	docker network ls 
 
 network-create:
-	docker network create --driver bridge spring-gumball-v1_network
+	docker network create --driver bridge spring-gumball-v2_network
 
 network-prune:
 	docker network prune
@@ -126,6 +126,8 @@ ingress-apply:
 
 ingress-ip:
 	kubectl get ingress spring-gumball-ingress
+
+
 
 
 

@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: spring-gumball
-        image: paulnguyen/spring-gumball:v1
+        image: gcr.io/PROJECT_ID/IMAGE:TAG
         ports:
         - containerPort: 8080
 
